@@ -171,7 +171,7 @@ class PartnerUpdateView(APIView):
 
 
 class BasketView(APIView):
-    # User basket
+    # User basket actions
     permission_classes = [IsAuthenticated, IsBuyerOnly]
 
     def get(self, request, *args, **kwargs):
@@ -247,7 +247,7 @@ class BasketView(APIView):
 
 
 class PartnerView(APIView):
-    # User basket
+    # Show partner shop and change job status
     permission_classes = [IsAuthenticated, IsShopOnly]
 
     def get(self, request, *args, **kwargs):
@@ -279,7 +279,7 @@ class PartnerOrdersView(APIView):
 
 
 class ContactView(APIView):
-    # Displaying the shop data and changing the work status
+    # Actions with user contacts
     permission_classes = [IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
